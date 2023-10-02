@@ -1,0 +1,255 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/*******************************************
+********************************************
+*******************************************/
+/*NAVEGACIÓN*/
+
+header{
+    /*width--ancho /// height-alto*/
+    width: 100%;
+    height: 60px;
+}
+
+/*Acceder a nav a través de header*/
+header nav{
+    display: flex;
+    /*Justificar a la derecha*/
+    justify-content: flex-end;
+}
+
+header nav .nav-right-section {
+
+    /*width--ancho /// height-alto* y el valor auto = altura automática*/
+    width: 250px;
+    height: auto;
+    /*Eliminar puntitos*/
+    list-style: none;
+    display: flex; /*Flexibilidad de los elementos*/
+    justify-content: center; /*Justificar al centro de acorde al elemento*/
+    align-items: center; /*Centrar verticalmente el elemento*/
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Anclas dentro del nav para agregar espacio*/
+nav .nav-right-section a {
+    /*Color del texto*/
+    color: rgba(0,0,0,.87);
+    margin-right: 20px;
+}
+/*Ícono del menú*/
+nav .nav-right-section .menu{
+    background-image: url(https://img.icons8.com/ios-glyphs/90/000000/circled-menu.png);
+    /*Que la imágen esté contenida en el elemento más grande*/
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*Imágen del usuario*/
+nav .nav-right-section img{
+    /*Redondeado de bordes*/
+    border-radius: 50%;
+    width: 35px;
+    margin-left: 20px;
+}
+
+/*******************************************
+********************************************
+*******************************************/
+/*SECCIÓN CENTRAL*/
+
+main{
+    margin-top: 60px;
+    /*Centrar elementos*/
+    text-align: center;
+}
+
+main .main-logo{
+    width: 530px;
+    margin-bottom: 35px;
+    /*Vertical // Horizontal*/
+    /*Centrado absoluto gracias a los márgenes*/
+    margin: 0 auto;
+}
+
+main .main-logo img{
+    height: 92px;
+    width: 272px;
+}
+
+main .main-input {
+    width:530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-input-container{
+    width: 550px;
+    margin-top: 25px;
+    border: 1px solid #dfe1e5;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input input{
+    height: 40px;
+    width: 450px;
+    /* Border -- quita la línea permanente del buscador*/
+    border: none;
+    /*Outline -- Quitar contorno al hacer click en la caja del buscador*/
+    outline: none;
+}
+
+/*Efecto hover -- sombra al poner mouse sin dar click*/
+main .main-input-container:hover{
+    /*Resalta la zona por donde el usuario pasa el mouse*/
+    border-color: #dfe1e500;
+    /*Box-shadow: desplazamiento horizontal de la sombra && desplazamiento vertical de la sombra
+    && desenfoque && expansión de la sombra*/
+    box-shadow: 0 1px 6px 0 #20212447;
+}
+
+main .main-input .search-icon{
+    background-image: url(https://seekicon.com/free-icon-download/search_20.svg);
+    background-size: contain;
+    background-position: center;
+    width: 13px;
+    height: 13px;
+    padding-left: 10px;
+    /*Background-repeat: Para que no se repita la imágen*/
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+
+main .main-input .micro-icon{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png);
+    width: 18px;
+    height: 18px;
+    padding-left: 3%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main .main-input .cam-icon{
+    background-image: url(https://static.wikia.nocookie.net/logopedia/images/2/2b/Google_Lens_2021.svg);
+    width: 17px;
+    height: 17px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 6%;
+}
+
+main .main-buttons{
+    width: 530px;
+    margin: 0 auto;
+}
+
+main .main-buttons div{
+    /*Pone los botones uno al lado del otro*/
+    display: inline-block;
+}
+
+main .main-buttons button {
+    border: none;
+    height: 36px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    color: #3c4043;
+    border-radius: 5px;
+    /* 0 --> margen arriba y abajo
+       15px --> margen a los lados*/
+    padding: 0 15px;
+    margin-right: 10px;
+    border: 1px solid #f8f9fa;
+}
+
+main .main-buttons button:hover{
+    /*Box-shadow: desplazamiento horizontal de la sombra && desplazamiento vertical de la sombra
+    && desenfoque && expansión de la sombra*/
+    box-shadow: 0px 1px 4px 0 #20212447;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+main .pais {
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 45px;
+    /*display-grid -- se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de cuadrícula*/
+    display: grid;
+    align-items: center;
+    justify-content: left;
+}
+
+main p {
+    margin: 18px;
+    font-size: 15px;
+    color: #70757A;
+
+
+}
+
+/*******************************************
+********************************************
+*******************************************/
+/*FOOTER SECTION*/
+
+footer{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    /*grid-template-columns -- define el nombre de las líneas y las funciones de tamaño de línea de grid columns*/
+    /*fr--dimensión no negativa, especifica el factor de flexibilidad de la vía*/
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-top: 1px solid #DADCE0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer ul{
+    margin: 10px;
+    /*Eliminar puntitos*/
+    list-style: none;
+    display: flex; /*Flexibilidad de los elementos*/
+    padding-left: 0;
+}
+
+footer .left-footer {
+    justify-content: left;
+
+}
+
+footer .right-footer {
+    justify-content: right;
+}
+
+footer ul li a {
+    margin: 10px;
+    /* arriba | izquierda y derecha | abajo */
+    padding: 0 3px 0 ;
+    font-size: 15px;
+    color: #70757A;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
